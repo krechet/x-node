@@ -1,0 +1,30 @@
+doctype 5
+html
+  head
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
+    script(src='/scripts/sh/scripts/shCore.js')
+    script(src='/scripts/sh/scripts/shBrushJScript.js')
+    script(src='/scripts/test.js')
+
+    link(rel='stylesheet', href='/scripts/sh/styles/shCoreDefault.css')
+
+  body
+        h1 Test Mdx
+        p
+            a(href='javascript:loadSample(0);', style='margin-left:20px;')="Ex1"
+            a(href='javascript:loadSample(1);', style='margin-left:20px;')="Ex2"
+        form(action='/execute', method='POST', enctype="multipart/form-data")
+            p
+                label(for='connectionString') Connection string:
+            p
+                textarea(name='connectionString', cols=60, rows=10, id='cs')=connectionString
+            p
+                label(for='queryString') Query:
+            p
+                textarea(name='queryString', cols=60, rows=10, id='qs')=queryString
+            p
+                input(type='submit')
+        
+        #code
+            
+
